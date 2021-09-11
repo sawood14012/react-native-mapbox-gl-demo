@@ -1,4 +1,4 @@
-/* eslint-disable react/jsx-no-undef */
+/* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 /* eslint-disable react-native/no-inline-styles */
 import React, {useRef, useState, useEffect} from 'react';
@@ -12,11 +12,8 @@ import SearchableDropdown from 'react-native-searchable-dropdown';
 
 import SplashScreen from 'react-native-splash-screen';
 
-MapboxGL.setAccessToken('YOUR_TOKEN_HERE');
+MapboxGL.setAccessToken(process.env.MAPBOX_GL_KEY);
 
-// eslint-disable-next-line no-undef
-
-// eslint-disable-next-line no-undef
 export default App = () => {
   useEffect(() => {
     SplashScreen.hide();
