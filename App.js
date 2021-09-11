@@ -5,14 +5,14 @@ import React, {useRef, useState, useEffect} from 'react';
 import {View, Image, Animated} from 'react-native';
 import MapboxGL from '@react-native-mapbox-gl/maps';
 import RBSheet from 'react-native-raw-bottom-sheet';
-import Header from './components/Header';
 const locationData = require('./landmarks.json');
 import Card from './components/card';
 import SearchableDropdown from 'react-native-searchable-dropdown';
 
 import SplashScreen from 'react-native-splash-screen';
+import {MAPBOX_GL_KEY} from '@env';
 
-MapboxGL.setAccessToken(process.env.MAPBOX_GL_KEY);
+MapboxGL.setAccessToken(MAPBOX_GL_KEY);
 
 export default App = () => {
   useEffect(() => {
